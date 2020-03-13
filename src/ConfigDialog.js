@@ -6,26 +6,10 @@ import RadioButton from './RadioButton.js'
 let radioList = ['one', 'two', 'three'];
 //<RadioButton radioData={['one', 'two', 'three','four']} radioTitle='This is Radio Titlez'/>
 
-let tabs = [ { content: 'Four' }, { content: 'Five' }, { content: 'Six' } ];
-let initialState = { selectedTabIndex: 0 };
 
 
 class ConfigDialog extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {selectedTabIndex: 0};
-    }
-
-    componentDidMount() {
-        this.setState({
-            selectedTabIndex: 0
-        });
-    } 
-
-    /*this.setState( function(previousState, currentProps) {
-        return { selectedTabIndex: currentProps};
-    });*/
 
     render() {
 
@@ -39,21 +23,6 @@ class ConfigDialog extends React.Component {
             <RadioButton radioData={radioList} radioTitle='This is Radio Titlez'/>
 
             <br/>
-            <br/>
-            <Tabs
-            activation='manual'
-            alignment='left'
-            onTabChange={(index) => {
-                console.log(`onChange: ${index}`);
-                setState({ selectedTabIndex: index });
-            }}
-            selectedTabIndex={state.selectedTabIndex}
-            tabs={tabs}
-            >
-            <span>{tabs[state.selectedTabIndex].content} panel content</span>
-            </Tabs>
-
-
 
             </>
         )
