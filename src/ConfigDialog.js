@@ -22,31 +22,31 @@ class ConfigDialog extends React.Component {
 
             <Tabs>
                 <TabList>
-                    <Tab>Mario</Tab>
-                    <Tab>Luigi</Tab>
-                    <Tab>Peach</Tab>
-                    <Tab>Yoshi</Tab>
+                    <Tab>Main</Tab>
+                    <Tab>Optional: Filter Actions</Tab>
+                    <Tab>Optional: Formatting</Tab>
+                    <Tab>About</Tab>
                 </TabList>
                 
                 <TabPanel>
-                    <p>Mario party!!</p>
+                    <p>Main, core options</p>
                     <br/>
                     <LineDropdown />
                 </TabPanel>
 
                 <TabPanel>
-                    <p>Luigi partyzz</p>
+                    <p>Optional features</p>
                     <br/>
                     <RadioButton radioData={radioList} radioTitle='This is Radio Titlez'/>
                     <br/>
                 </TabPanel>
 
                 <TabPanel>
-                    <p>Peach food</p>
+                    <p>Optional formatting stuff</p>
                 </TabPanel>
 
                 <TabPanel>
-                    <p>Yoshi music</p>
+                    <p>About</p>
                 </TabPanel>
 
 
