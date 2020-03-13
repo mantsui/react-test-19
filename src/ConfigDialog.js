@@ -1,7 +1,9 @@
 import React from 'react';
-import { Tabs } from '@tableau/tableau-ui'
 import LineDropdown from './LineDropdown.js'
 import RadioButton from './RadioButton.js'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+
 
 let radioList = ['one', 'two', 'three'];
 //<RadioButton radioData={['one', 'two', 'three','four']} radioTitle='This is Radio Titlez'/>
@@ -18,11 +20,40 @@ class ConfigDialog extends React.Component {
             <>
             <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.</h1>
 
-            <LineDropdown />
-            <br/>
-            <RadioButton radioData={radioList} radioTitle='This is Radio Titlez'/>
+            <Tabs>
+                <TabList>
+                    <Tab>Mario</Tab>
+                    <Tab>Luigi</Tab>
+                    <Tab>Peach</Tab>
+                    <Tab>Yoshi</Tab>
+                </TabList>
+                
+                <TabPanel>
+                    <p>Mario party!!</p>
+                    <br/>
+                    <LineDropdown />
+                </TabPanel>
 
-            <br/>
+                <TabPanel>
+                    <p>Luigi partyzz</p>
+                    <br/>
+                    <RadioButton radioData={radioList} radioTitle='This is Radio Titlez'/>
+                    <br/>
+                </TabPanel>
+
+                <TabPanel>
+                    <p>Peach food</p>
+                </TabPanel>
+
+                <TabPanel>
+                    <p>Yoshi music</p>
+                </TabPanel>
+
+
+
+            </Tabs>
+
+
 
             </>
         )
