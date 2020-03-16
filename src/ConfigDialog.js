@@ -12,8 +12,47 @@ let radioList = ['one', 'two', 'three'];
 
 class ConfigDialog extends React.Component {
 
+    componentWillMount() {
+        //this.setState({ selectedTabIndex: 0 });
 
-    
+        try{
+            tableau.extensions.initializeDialogAsync().then(() => {
+                console.log('Debug: component will mount.');
+                const tableauSettings = tableau.extensions.settings.getAll();
+                const tableauDashboard = tableau.extensions.dashboardContent.dashboard;
+
+                tableauDashboard.worksheets.forEach(function (worksheet) {
+                    sheetList02.push(worksheet.name);
+
+                    worksheet.getSummaryDataAsync({ maxRows: 1 }).then(function (sumdata) {
+                        console.log('Debug running worksheet.getSummaryDataAsync... ');
+
+                        sumdata.columns.forEach(function (current_value) {
+
+                            if(current_value.dataType === 'float' || current_value.dataType === 'int') {
+                                measureColumns.push(current_value.fieldName);
+                            }
+                    
+                            if(current_value.dataType === 'string') {
+                                dimensionColumns.push(current_value.fieldName);
+                            }
+                    
+                        });
+                    });
+                });
+
+                console.log('Debug tableauSettings: ', tableauSettings);
+                console.log('Debug sheetList02: ', sheetList02);
+                console.log('Debug tableauDashboard: ', tableauDashboard);
+                console.log('Debug measureColumns: ', measureColumns);
+                console.log('Debug dimensionColumns: ', dimensionColumns);
+            });
+        }
+        catch(err){
+            console.log('window.tableau.extensions did not load');
+        }
+    }
+
     render() {
 
 
