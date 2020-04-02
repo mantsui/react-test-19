@@ -1,9 +1,9 @@
+import 'tableau-extensions-1.latest.js';
+import 'react-tabs/style/react-tabs.css';
 import React from 'react';
 import LineDropdown from './LineDropdown.js'
 import RadioButton from './RadioButton.js'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-
 
 let radioList = ['one', 'two', 'three'];
 //<RadioButton radioData={['one', 'two', 'three','four']} radioTitle='This is Radio Titlez'/>
