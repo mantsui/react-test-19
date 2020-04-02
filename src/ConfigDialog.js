@@ -1,4 +1,4 @@
-import 'tableau-extensions-1.latest.js';
+import './tableau-extensions-1.latest.js';
 import 'react-tabs/style/react-tabs.css';
 import React from 'react';
 import LineDropdown from './LineDropdown.js'
