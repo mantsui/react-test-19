@@ -15,7 +15,7 @@ class ConfigDialog extends React.Component {
     componentWillMount() {
         //this.setState({ selectedTabIndex: 0 });
 
-        /*try{
+        try{
             window.tableau.extensions.initializeDialogAsync().then(() => {
                 console.log('Debug: component will mount.');
                 const tableauSettings = tableau.extensions.settings.getAll();
@@ -50,7 +50,7 @@ class ConfigDialog extends React.Component {
         }
         catch(err){
             console.log('window.tableau.extensions did not load');
-        }*/
+        }
     }
 
     render() {
