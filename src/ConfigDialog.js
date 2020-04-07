@@ -46,11 +46,11 @@ class ConfigDialog extends React.Component {
                 console.log('Debug tableauDashboard: ', tableauDashboard);
                 console.log('Debug measureColumns: ', measureColumns);
                 console.log('Debug dimensionColumns: ', dimensionColumns);
-            });
+            });*/
         }
         catch(err){
             console.log('window.tableau.extensions did not load');
-        }*/
+        }
     }
 
     render() {
