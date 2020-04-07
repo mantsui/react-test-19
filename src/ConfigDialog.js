@@ -15,8 +15,8 @@ class ConfigDialog extends React.Component {
     componentWillMount() {
         //this.setState({ selectedTabIndex: 0 });
 
-        try{
-            /*window.tableau.extensions.initializeDialogAsync().then(() => {
+        /*try{
+            window.tableau.extensions.initializeDialogAsync().then(() => {
                 console.log('Debug: component will mount.');
                 const tableauSettings = tableau.extensions.settings.getAll();
                 const tableauDashboard = tableau.extensions.dashboardContent.dashboard;
@@ -46,11 +46,11 @@ class ConfigDialog extends React.Component {
                 console.log('Debug tableauDashboard: ', tableauDashboard);
                 console.log('Debug measureColumns: ', measureColumns);
                 console.log('Debug dimensionColumns: ', dimensionColumns);
-            });*/
+            });
         }
         catch(err){
             console.log('window.tableau.extensions did not load');
-        }
+        }*/
     }
 
     render() {
