@@ -33,7 +33,7 @@ function ConfigDialog () {
 
     return(
         <>
-        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.</h1>
+        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.01</h1>
 
         <Tabs>
             <TabList>
