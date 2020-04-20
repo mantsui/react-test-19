@@ -5,6 +5,8 @@ import LineDropdown from './LineDropdown.js'
 import RadioButton from './RadioButton.js'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
+const { tableau } = window;
+
 let radioList = ['one', 'two', 'three'];
 //<RadioButton radioData={['one', 'two', 'three','four']} radioTitle='This is Radio Titlez'/>
 
