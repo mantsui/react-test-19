@@ -26,9 +26,11 @@ function ConfigDialog () {
             const tabSheetNames = tableau.extensions.dashboardContent.dashboard.worksheets.map(worksheet => worksheet.name);
             setSheetNames(sheetNames);
         });*/
-            const dashboard = tableau.extensions.dashboardContent.dashboard;
-            dashboard.worksheets.forEach(function (worksheet) {
-                console.log('Tableau worksheet name: ', worksheet.name);
+            tableau.extensions.initializeAsync().then(() => {
+                const dashboard = tableau.extensions.dashboardContent.dashboard;
+                dashboard.worksheets.forEach(function (worksheet) {
+                    console.log('Tableau worksheet name: ', worksheet.name);
+                });
             });
         }
         
@@ -42,7 +44,7 @@ function ConfigDialog () {
 
     return(
         <>
-        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.04</h1>
+        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.05</h1>
 
         <Tabs>
             <TabList>
