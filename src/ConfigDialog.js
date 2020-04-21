@@ -19,13 +19,17 @@ function ConfigDialog () {
     useEffect(() => {
         console.log('useFffect running');
 
-        tableau.extensions.initializeAsync().then(() => {
+        try{tableau.extensions.initializeAsync().then(() => {
             const tabSelectedSheet = tableau.extensions.settings.get('sheet');
             setSelectedSheet(tabSelectedSheet);
 
             const tabSheetNames = tableau.extensions.dashboardContent.dashboard.worksheets.map(worksheet => worksheet.name);
             setSheetNames(sheetNames);
-        });
+        });}
+        
+        catch{
+            console.log('tableau not found.')
+        }
 
         console.log('Console log output for tableau sheet');
         console.log(selectedSheet);
