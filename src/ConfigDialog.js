@@ -19,13 +19,18 @@ function ConfigDialog () {
     useEffect(() => {
         console.log('useFffect running');
 
-        try{tableau.extensions.initializeAsync().then(() => {
+        try{/*tableau.extensions.initializeAsync().then(() => {
             const tabSelectedSheet = tableau.extensions.settings.get('sheet');
             setSelectedSheet(tabSelectedSheet);
 
             const tabSheetNames = tableau.extensions.dashboardContent.dashboard.worksheets.map(worksheet => worksheet.name);
             setSheetNames(sheetNames);
-        });}
+        });*/
+            let dashboard = tableau.extensions.dashboardContent.dashboard;
+            dashboard.worksheets.forEach(function (worksheet) {
+                console.log('Tableau worksheet name: ', worksheet.name);
+            });
+        }
         
         catch{
             console.log('tableau not found.')
@@ -37,7 +42,7 @@ function ConfigDialog () {
 
     return(
         <>
-        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.02</h1>
+        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.03</h1>
 
         <Tabs>
             <TabList>
