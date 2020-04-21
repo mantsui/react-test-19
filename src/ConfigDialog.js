@@ -17,7 +17,7 @@ function ConfigDialog () {
     const [sheetNames, setSheetNames] = useState([]);
 
     useEffect(() => {
-        console.log('useFffect running');
+        console.log('useEffect running');
 
         try{/*tableau.extensions.initializeAsync().then(() => {
             const tabSelectedSheet = tableau.extensions.settings.get('sheet');
@@ -26,7 +26,7 @@ function ConfigDialog () {
             const tabSheetNames = tableau.extensions.dashboardContent.dashboard.worksheets.map(worksheet => worksheet.name);
             setSheetNames(sheetNames);
         });*/
-            let dashboard = tableau.extensions.dashboardContent.dashboard;
+            const dashboard = tableau.extensions.dashboardContent.dashboard;
             dashboard.worksheets.forEach(function (worksheet) {
                 console.log('Tableau worksheet name: ', worksheet.name);
             });
@@ -42,7 +42,7 @@ function ConfigDialog () {
 
     return(
         <>
-        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.03</h1>
+        <h1>Tableau Extension D3 Sankey Diagram ConfigDialog.04</h1>
 
         <Tabs>
             <TabList>
